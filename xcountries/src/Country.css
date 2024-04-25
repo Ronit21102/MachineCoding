@@ -1,0 +1,25 @@
+.card-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 20px; 
+  }
+  
+  .card-style {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    padding: 10px; 
+    text-align: center; 
+  }
+  
+  .flag {
+    width: 100px; 
+    height: auto; 
+  }
+  
+  .name {
+    margin-top: 10px; 
+    font-size: 16px; 
+  }
+  
