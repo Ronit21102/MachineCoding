@@ -1,2 +1,4 @@
 # Xcountries
-This react app to practice infinite  scroll
+Fetching data and displaying
+
+#Xstopwatch
