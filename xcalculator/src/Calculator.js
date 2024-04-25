@@ -3,7 +3,6 @@ import { useState, useMemo } from "react";
 import "./Calulator.css";
 
 const Calculator = () => {
-  const [count, setCount] = useState("");
   const [expression, setExpression] = useState("");
   const [result, setResult] = useState(0);
   const arr = useMemo(() => {
@@ -11,7 +10,6 @@ const Calculator = () => {
   }, []);
 
   const calculate = (e) => {
-    console.log(e.target.name);
     const val = e.target.name;
     if (val === "C") {
       setExpression("");
@@ -23,7 +21,6 @@ const Calculator = () => {
         setResult("Error");
       }
     } else {
-      setCount((prev) => prev + val);
       setExpression((prev) => prev + val);
     }
   };
@@ -31,7 +28,7 @@ const Calculator = () => {
     <div className="calci">
       <h1 className="heading">React Calculator</h1>
 
-      <input value={count} />
+      <input value={expression} />
       <p className="result">{result !== 0 ? result : ""}</p>
       <div className="buttons">
         {arr.map((val, ind) => (
