@@ -4,7 +4,7 @@ import "./Calulator.css";
 
 const Calculator = () => {
   const [expression, setExpression] = useState("");
-  const [result, setResult] = useState(0);
+  const [result, setResult] = useState("");
   const arr = useMemo(() => {
     return [7, 8, 9, "+", 4, 5, 6, "-", 1, 2, 3, "*", "C", 0, "=", "/"];
   }, []);
@@ -15,11 +15,14 @@ const Calculator = () => {
       setExpression("");
       setResult(0);
     } else if (val === "=") {
-      try {
-        setResult(eval(expression));
-      } catch (error) {
-        setResult("Error");
-      }
+    
+      
+        if (expression === "") {
+          setResult("Error"); 
+        } else {
+          setResult(eval(expression)); 
+        }
+    
     } else {
       setExpression((prev) => prev + val);
     }
@@ -29,7 +32,7 @@ const Calculator = () => {
       <h1 className="heading">React Calculator</h1>
 
       <input value={expression} />
-      <p className="result">{result !== 0 ? result : ""}</p>
+      <p className="result">{result}</p>
       <div className="buttons">
         {arr.map((val, ind) => (
           <button key={ind} name={val} onClick={calculate}>
