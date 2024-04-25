@@ -1,0 +1,40 @@
+.calci {
+    margin: 50px auto;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #ccc;
+  }
+  
+  .heading {
+    text-align: center;
+  }
+
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .result{
+    font-size: 24px;
+    text-align: center;
+
+  }
+  .buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 5px;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   
+  button:hover {
+    background-color: #e0e0e0;
+  }
